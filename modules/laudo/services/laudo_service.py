@@ -1,5 +1,4 @@
 from flask import jsonify
-from db.execute import execute_query
 from modules.laudo.repositories.laudo_repository import create_laudo_repository, get_laudo_repository, delete_laudo_repository
 
 def create_laudo_service(data):    

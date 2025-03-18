@@ -11,8 +11,8 @@ load_dotenv()
 
 # Load environment variables from .env file
 
-pythonport = os.getenv("PYTHON_PORT", "5000")
-debugstate = os.getenv("DEBUG_STATE", "False").lower() == "true"
+python_port = os.getenv("PYTHON_PORT", "5000")
+debug_state = os.getenv("DEBUG_STATE", "False").lower() == "true"
 
 generate_tables()
 
@@ -24,4 +24,4 @@ def teste():
     return "<html><body><p>OK " + str(current_date) + "</p></body></html>"
                 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(pythonport), debug=debugstate)
+    app.run(host='0.0.0.0', port=int(python_port), debug=debug_state)

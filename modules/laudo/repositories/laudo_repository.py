@@ -1,8 +1,4 @@
-from flask import jsonify
 from db.execute import execute_query
-import datetime
-import json
-import sqlite3
 
 def create_laudo_repository(data):    
     return execute_query(f'INSERT INTO laudo (study_iuid) VALUES (?)', params=(data['study_iuid'],))
