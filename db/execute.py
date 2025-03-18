@@ -21,7 +21,6 @@ def execute_query(query, params=(), fetch_one=False):
             return cursor.rowcount
     except sqlite3.connector.Error as error:
         print(error)
-        conn.close()
         return None
     finally:
         cursor.close()
